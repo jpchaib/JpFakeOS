@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.minimized {
+  background-color: linear-gradient(to bottom, #0c8dea 0%, #92accd 9%, #0c8dea 18%, #0c8dea 92%, #333 100%);
+  border: 2px solid #333;
+  border-radius: 5px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-justify: left;
+}
+
+.selected {
+  background-color: #245edb;
+}
+
+body {
+  background-image: url("./images/wallpaper.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.divider {
+  height: 2px;
+  width: 80%;
+  background: linear-gradient(to right, transparent 0%, #aebad6 50%, transparent 100%) center/cover no-repeat;
+  align-self: center;
+}
+
+.icons {
+  width: 100%;
+  height: 96vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+.icons__figure {
+  background-color: none;
+  display: flex;
+  flex-direction: column;
+}
+.icons__figure__icon {
+  align-items: center;
+  margin: 5px;
+  margin-left: 20px;
+  width: 50px;
+}
+.icons__figure__label {
+  text-align: center;
+  margin-left: 10px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: aliceblue;
+}
+
+.taskbar {
+  align-self: flex-end;
+  width: 100%;
+  height: 35px;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(to bottom, #245edb 0%, #3f8cf3 9%, #245edb 18%, #245edb 92%, #333 100%);
+}
+.taskbar__start__img {
+  height: 100%;
+}
+.taskbar__start__img:hover {
+  cursor: pointer;
+}
+.taskbar__start__img:active {
+  cursor: default;
+}
+.taskbar__clock {
+  position: absolute;
+  bottom: 0px;
+  right: 15px;
+  font-size: 12px;
+  color: aliceblue;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: right;
+}
+
+.modal-menu {
+  font-family: verdana;
+  position: absolute;
+  bottom: 0px;
+  left: -5px;
+  width: 450px;
+  box-shadow: 3px 2px 3px #7fbce8 inset;
+  background: linear-gradient(to bottom, #245edb 0%, #0c8dea 100%);
+  padding: 8px 0px 7px 8px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.modal-menu__head {
+  display: flex;
+  align-items: center;
+  height: 85px;
+}
+.modal-menu__head__img {
+  width: 60px;
+  border: 3px solid white;
+  background-color: white;
+  border-radius: 5px;
+  padding: 2px;
+  height: 75%;
+  display: inline-block;
+  box-shadow: 2px 2px 4px #333;
+  margin-left: 5px;
+  margin-bottom: 5px;
+}
+.modal-menu__head__img:hover {
+  cursor: pointer;
+}
+.modal-menu__head__name {
+  font-family: verdana;
+  display: inline-block;
+  margin: 0;
+  color: white;
+  font-size: 18px;
+  font-weight: normal;
+  margin-left: 10px;
+  text-shadow: 0px 0px 3px #555;
+}
+.modal-menu__head__name:hover {
+  cursor: pointer;
+}
+.modal-menu__apps {
+  display: flex;
+  flex-direction: row;
+  height: 530px;
+}
+.modal-menu__apps__left {
+  background-color: white;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  border: 4px solid white;
+}
+.modal-menu__apps__left__icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 3px;
+  font-size: smaller;
+  justify-content: flex-start;
+}
+.modal-menu__apps__left__icon:hover {
+  background-color: #245edb;
+  color: white;
+}
+.modal-menu__apps__left__icon__img {
+  margin: 10px;
+  height: 40px;
+}
+.modal-menu__apps__right {
+  background-color: rgb(211, 229, 251);
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+.modal-menu__apps__right__icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 3px;
+  font-size: smaller;
+  justify-content: flex-start;
+}
+.modal-menu__apps__right__icon:hover {
+  background-color: #245edb;
+  color: white;
+}
+.modal-menu__apps__right__icon__img {
+  margin: 10px;
+  height: 30px;
+}

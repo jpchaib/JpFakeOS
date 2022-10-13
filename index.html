@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script defer src="script.js"></script>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body id="screen" onload="display_ct()">
+        <div class="windows" id="windows"></div>
+        <div class="icons screen">
+            <div class="icons__figure" id="mycomputer">
+                <img class="icons__figure__icon" src="./icons/My Computer.ico" alt="My computer" />
+                <label class="icons__figure__label" for="mycomputer">My Computer</label>
+            </div>
+            <div class="icons__figure" id="file">
+                <img class="icons__figure__icon" src="./icons/File.ico" alt="File" />
+                <label class="icons__figure__label" for="file">File</label>
+            </div>
+            <div class="icons__figure" id="folder">
+                <img class="icons__figure__icon" src="./icons/Folder Open.ico" alt="Folder Open" />
+                <label class="icons__figure__label" for="folder">My Folder</label>
+            </div>
+            <div class="icons__figure" id="list">
+                <img class="icons__figure__icon" src="./icons/List File.ico" alt="List File" />
+                <label class="icons__figure__label" for="list">List</label>
+            </div>
+            <div class="icons__figure" id="minesweeper">
+                <img class="icons__figure__icon" src="./icons/Minesweeper.ico" alt="Minesweeper" />
+                <label class="icons__figure__label" for="minesweeper">Minesweeper</label>
+            </div>
+            <div class="icons__figure" id="pinball">
+                <img class="icons__figure__icon" src="./icons/Pinball.ico" alt="Pinball" />
+                <label class="icons__figure__label" for="pinball">Pinball</label>
+            </div>
+            <div class="icons__figure" id="system">
+                <img class="icons__figure__icon" src="./icons/System Properties.ico" alt="System Properties" />
+                <label class="icons__figure__label" for="system">System</label>
+            </div>
+            <div class="icons__figure" id="video">
+                <img class="icons__figure__icon" src="./icons/Video.ico" alt="Video File" />
+                <label class="icons__figure__label" for="video">Video</label>
+            </div>
+            <div class="icons__figure" id="music">
+                <img class="icons__figure__icon" src="./icons/Music File.ico" alt="Music File" />
+                <label class="icons__figure__label" for="music">Music</label>
+            </div>
+        </div>
+        <!--Start Menu - initially hidden in script.js-->
+        <div class="nomark modal-menu" id="start-menu-container">
+            <div class="nomark modal-menu__head">
+                <img class="nomark modal-menu__head__img" src="./images/Profile picture.jpg" alt="User Picture" />
+                <p class="nomark modal-menu__head__name">Joao Pedro Chaib</p>
+            </div>
+            <div class="nomark modal-menu__apps">
+                <div class="nomark modal-menu__apps__left">
+                    <div class="nomark modal-menu__apps__left__icon">
+                        <img class="nomark modal-menu__apps__left__icon__img" src="./icons/Earth (fixed).ico" alt="" />
+                        <label class="nomark modal-menu__apps__left__icon__label" for=""
+                            ><b>World Wide Web</b>
+                            <p>World Wide Web</p></label
+                        >
+                    </div>
+                    <div class="nomark modal-menu__apps__left__icon">
+                        <img class="nomark modal-menu__apps__left__icon__img" src="./icons/Camera.ico" alt="" />
+                        <label class="nomark modal-menu__apps__left__icon__label" for=""
+                            ><b>Camera</b>
+                            <p>Camera</p></label
+                        >
+                    </div>
+                    <div class="divider"></div>
+                    <div class="nomark modal-menu__apps__left__icon">
+                        <img class="nomark modal-menu__apps__left__icon__img" src="./icons/Freecell.ico" alt="" />
+                        <label class="nomark modal-menu__apps__left__icon__label" for="">Freecell</label>
+                    </div>
+                    <div class="nomark modal-menu__apps__left__icon">
+                        <img class="nomark modal-menu__apps__left__icon__img" src="./icons/Game Controller.ico" alt="" />
+                        <label class="nomark modal-menu__apps__left__icon__label" for="">Game Controller</label>
+                    </div>
+                    <div class="nomark modal-menu__apps__left__icon">
+                        <img class="nomark modal-menu__apps__left__icon__img" src="./icons/Network Computers.ico" alt="" />
+                        <label class="nomark modal-menu__apps__left__icon__label" for="">Network</label>
+                    </div>
+                    <div class="nomark modal-menu__apps__left__icon">
+                        <img class="nomark modal-menu__apps__left__icon__img" src="./icons/Sounds, Speech, and Audio Devices.ico" alt="" />
+                        <label class="nomark modal-menu__apps__left__icon__label" for="">Settings</label>
+                    </div>
+                    <div class="nomark modal-menu__apps__left__icon">
+                        <img class="nomark modal-menu__apps__left__icon__img" src="./icons/User Accounts.ico" alt="" />
+                        <label class="nomark modal-menu__apps__left__icon__label" for="">User Accounts</label>
+                    </div>
+                    <div class="nomark modal-menu__apps__left__icon">
+                        <img class="nomark modal-menu__apps__left__icon__img" src="./icons/User's Computer.ico" alt="" />
+                        <label class="nomark modal-menu__apps__left__icon__label" for="">User Computer</label>
+                    </div>
+                </div>
+                <div class="nomark modal-menu__apps__right">
+                    <div class="nomark modal-menu__apps__right__icon need-more-time">
+                        <img class="nomark modal-menu__apps__right__icon__img" src="./icons/1_XP CD ROM Drive (4).ico" alt="" />
+                        <label class="nomark modal-menu__apps__right__icon__label" for="">My Documents</label>
+                    </div>
+                    <div class="nomark modal-menu__apps__right__icon need-more-time">
+                        <img class="nomark modal-menu__apps__right__icon__img" src="./icons/1_XP CD ROM Drive (5).ico" alt="" />
+                        <label class="nomark modal-menu__apps__right__icon__label" for="">More Documents</label>
+                    </div>
+                    <div class="nomark modal-menu__apps__right__icon need-more-time">
+                        <img class="nomark modal-menu__apps__right__icon__img" src="./icons/1_XP CD ROM Drive (3).ico" alt="" />
+                        <label class="nomark modal-menu__apps__right__icon__label" for="">My Death Notes</label>
+                    </div>
+                    <div class="nomark modal-menu__apps__right__icon need-more-time">
+                        <img class="nomark modal-menu__apps__right__icon__img" src="./icons/1_XP CD ROM Drive (9).ico" alt="" />
+                        <label class="nomark modal-menu__apps__right__icon__label" for="">Zipped</label>
+                    </div>
+                    <div class="nomark modal-menu__apps__right__icon need-more-time">
+                        <img class="nomark modal-menu__apps__right__icon__img" src="./icons/1_XP CD ROM Drive (8).ico" alt="" />
+                        <label class="nomark modal-menu__apps__right__icon__label" for="">My Downloads</label>
+                    </div>
+                    <div class="nomark modal-menu__apps__right__icon need-more-time">
+                        <img class="nomark modal-menu__apps__right__icon__img" src="./icons/1_XP CD ROM Drive (2).ico" alt="" />
+                        <label class="nomark modal-menu__apps__right__icon__label" for="">Desktop</label>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="nomark modal-menu__apps__right__icon need-more-time">
+                        <img class="nomark modal-menu__apps__right__icon__img" src="./icons/1_XP CD ROM Drive (1).ico" alt="" />
+                        <label class="nomark modal-menu__apps__right__icon__label" for="">CD ROM Drive</label>
+                    </div>
+                    <div class="nomark modal-menu__apps__right__icon need-more-time">
+                        <img class="nomark modal-menu__apps__right__icon__img" src="./icons/1_XP CD ROM Drive (6).ico" alt="" />
+                        <label class="nomark modal-menu__apps__right__icon__label" for="">Print</label>
+                    </div>
+                    <div class="nomark modal-menu__apps__right__icon need-more-time">
+                        <img class="nomark modal-menu__apps__right__icon__img" src="./icons/1_XP CD ROM Drive (7).ico" alt="" />
+                        <label class="nomark modal-menu__apps__right__icon__label" for="">USB port</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="taskbar" id="taskbar">
+            <div class="taskbar__start">
+                <img class="taskbar__start__img" id="start" src="./images/XP Enhanced Start Button.png" alt="" />
+            </div>
+            <div id="window-container"></div>
+            <div class="taskbar__clock">
+                <p id="ct"></p>
+                <p id="cd"></p>
+            </div>
+        </nav>
+    </body>
+</html>
