@@ -4,11 +4,12 @@
 }
 
 .minimized {
-  background-color: linear-gradient(to bottom, #0c8dea 0%, #92accd 9%, #0c8dea 18%, #0c8dea 92%, #333 100%);
+  background: linear-gradient(to bottom, #0c8dea 0%, #70a3e5 9%, #0c8dea 18%, #0c8dea 92%, #333 100%);
   border: 2px solid #333;
   border-radius: 5px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   text-justify: left;
+  color: white;
 }
 
 .selected {

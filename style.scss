@@ -7,11 +7,12 @@ $light-blue: #0c8dea;
 }
 
 .minimized {
-    background-color: linear-gradient(to bottom, #{$light-blue} 0%, #92accd 9%, #{$light-blue} 18%, #{$light-blue} 92%, #333 100%);
+    background: linear-gradient(to bottom, #{$light-blue} 0%, #70a3e5 9%, #{$light-blue} 18%, #{$light-blue} 92%, #333 100%);
     border: 2px solid #333;
     border-radius: 5px;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     text-justify: left;
+    color: white;
 }
 
 .selected {
