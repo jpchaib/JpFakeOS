@@ -63,38 +63,29 @@ for (let i = 0; i < allButSelected.length; i++) {
     allButSelected[i].addEventListener("click", unmark);
 }
 
+// opening windows by double-clicking the dektop icons
 let x = 380;
 let y = 80;
 const imgArray = ["./images/mycomputer.png", "./images/file.png", "./images/folder.png", "./images/list.png", "./images/minesweeper.png", "./images/pinball.png", "./images/system.png", "./images/video.png", "./images/music.png"];
 const iconArray = ["mycomputer", "file", "folder", "list", "minesweeper", "pinball", "system", "video", "music"];
 
 const createModal = (event) => {
+    event.stopPropagation();
+    x = 380 + 50 * document.getElementsByClassName("minimized").length;
+    y = 80 + 50 * document.getElementsByClassName("minimized").length;
+
     const minimized = document.createElement("button");
     const div = document.createElement("div");
     const button = document.createElement("button");
-    console.log(button);
     const img = document.createElement("img");
 
-    // style window - maybe move it to SCSS
-    div.style.position = "fixed";
-    div.style.width = "500px";
-    div.style.height = "450px";
+    // style window
+    div.classList.add("div");
     div.style.top = `${y}px`;
     div.style.left = `${x}px`;
-    div.style.backgroundColor = "white";
-    div.style.border = "2px solid white";
-    div.style.borderRadius = "10px";
 
     // style button - maybe move it to SCSS
-    button.style.position = "absolute";
-    button.style.width = "20px";
-    button.style.height = "20px";
-    button.style.bottom = `100%`;
-    button.style.left = `100%`;
-    button.style.backgroundColor = "red";
-    button.style.color = "white";
-    button.style.border = "1px solid white";
-    button.style.pointerEvents = "auto";
+    button.classList.add("button");
 
     //style img
     img.style.width = "100%";
@@ -111,6 +102,7 @@ const createModal = (event) => {
     div.appendChild(button);
     button.addEventListener("click", () => div.remove());
     button.addEventListener("click", () => minimized.remove());
+    button.addEventListener("click", restore);
     button.innerText = "X";
     div.appendChild(img);
 
@@ -127,17 +119,25 @@ const createModal = (event) => {
     const winCounter = document.getElementsByClassName("minimized");
     img.src = imgArray[iconArray.indexOf(id)];
 
-    const w = winCounter.length <= 5 ? `${28.6}vh` : `${143 / winCounter.length}vh`;
+    const w = winCounter.length <= 5 ? `${16.6}vw` : `${85 / winCounter.length}vw`;
     for (let i = 0; i < winCounter.length; i++) {
         winCounter[i].style.width = w;
         winCounter[i].style.height = `100%`;
     }
 
-    x = x + 50;
-    y = y + 50;
+    if (event.target.classList.contains("openapp")) {
+        img.remove();
+    }
 };
 
 const icons = document.getElementsByClassName("icons__figure");
 for (let i = 0; i < icons.length; i++) {
     icons[i].addEventListener("dblclick", createModal);
+}
+
+// open apps by clicking the menu-start
+
+const appsleft = document.getElementsByClassName("openapp");
+for (let i = 0; i < appsleft.length; i++) {
+    appsleft[i].addEventListener("click", createModal);
 }
