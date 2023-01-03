@@ -19,6 +19,3 @@ You can now open the index.html file in your local repository folder.
 - SCSS
 - CSS
 
-## License
-
-This project is licensed under the MIT License. See [LICENSE](LICENSE) for more information.
